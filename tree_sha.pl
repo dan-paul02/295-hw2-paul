@@ -1,11 +1,12 @@
 use strict;
 
 
-my $input = @ARGV[0];
+my $sha = @ARGV[0];
 
 my $path = ".git/refs/heads/main";
 
-my $command =`git cat-file -t $path`;
+chomp(my $command =`git cat-file -t $sha`);
 
-print("$input\n");
+print $command;
+
 
