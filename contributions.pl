@@ -9,3 +9,4 @@ chomp(my $firstCommit = `git log --pretty=format:'%ad' --author $authorName -- $
 chomp(my $recentCount = `git log --pretty=format:'%ad' --author $authorName -- $filename -1`);
 
 print($authorEmail, ",", $commitCount, ",",$firstCommit, ",", $recentCount);
+
